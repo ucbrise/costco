@@ -10,7 +10,7 @@ from .codegen import ABYCodeGenerator
 
 logging.basicConfig(level=logging.INFO)
 
-def transform(mod: ast.Module) -> ast.Module:
+def transform(mod: ast.Module, out_file: str) -> ast.Module:
     print(ast.dump(mod))
     ds = Desugarer()
     mod = ds.visit(mod)
@@ -44,7 +44,7 @@ def transform(mod: ast.Module) -> ast.Module:
     a = ass.get_optimal_assignment()
     ass.assign_conversions(a)
     acg = ABYCodeGenerator(cfg, a)
-    acg.generate_code()
+    acg.generate_code(out_file)
     return
     mpc = MPCSource()
     mpc.visit(mod)

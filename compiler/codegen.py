@@ -701,8 +701,8 @@ class ABYCodeGenerator:
             if isinstance(c, c_t):
                 return s % input
 
-    def generate_code(self):
-        f = open("out.cpp", "w")
+    def generate_code(self, outfile="out.cpp"):
+        f = open(outfile, "w")
         print(prelude, file=f)
         tf = TypeFinder({})
         starting_n = None

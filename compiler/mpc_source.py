@@ -545,9 +545,9 @@ class Assigner:
             if min_cost is None or cost < min_cost:
                 min_cost = cost
                 min_assignment = assignment
-        import pickle
-        with open("min_assignment", "wb") as f:
-            pickle.dump(min_assignment, f)
+        #import pickle
+        #with open("min_assignment", "wb") as f:
+        #    pickle.dump(min_assignment, f)
         print("min cost", min_cost)
         for d, a in min_assignment.protocols.items():
             print("assignment -- %s: %s weight=%d" % (d, a, d.res_weight))
