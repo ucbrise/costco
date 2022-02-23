@@ -1,0 +1,9 @@
+#/Users/vivian/proj/costs/circuit.py
+# GMT Wed May 27 12:56:14 2020
+# 
+INPUT0_0 B2A_2
+INPUT1_1 B2A_3
+B2A_2 OUTPUT_5
+B2A_3 OUTPUT_4
+OUTPUT_4
+OUTPUT_5
