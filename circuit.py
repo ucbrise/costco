@@ -1,3 +1,4 @@
+import argparse
 import matplotlib.pyplot as plt
 import networkx as nx
 import random
@@ -650,25 +651,22 @@ def interleave(mpc):
             n_gates, adjusted, "-".join(gate_str), width))
 
 
-spec_file = "specs/aby-yao.yaml"
-experiment_type = "pbd"
-vary_width = True
-max_gates = 2**13
-
-experiment_type = "ccd"
-vary_width = False
-width = 0
-
 def main():
-    protocol = MPC(spec_file)
-    if experiment_type == "pbd":
-        pbd(protocol, max_gates)
-    elif experiment_type == "ccd":
-        if vary_width:
-            ccd(protocol, max_gates)
-        else:
-            ccd_no_width(protocol, max_gates, width)
+    parser = argparse.ArgumentParser(description='Circuit generator for CostCO.')
+    parser.add_argument('spec_file', type=str, help='spec file path')
+    parser.add_argument('experiment_type', type=str, help='experiment type (ccd, pbd)')
+    parser.add_argument('-w', '--width', default=0, help='fixed width (circuit depth) [default=0]')
+    parser.add_argument('-g', '--max_gates', default=2**13, help='max gates [default=2**13]')
+    args = parser.parse_args()
 
+    protocol = MPC(args.spec_file)
+    if args.experiment_type == "pbd":
+        pbd(protocol, args.max_gates)
+    elif args.experiment_type == "ccd":
+        if vary_width:
+            ccd(protocol, args.max_gates)
+        else:
+            ccd_no_width(protocol, args.max_gates, args.width)
 
 
 def _main():

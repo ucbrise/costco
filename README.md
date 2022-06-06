@@ -21,14 +21,14 @@ For convenience, you can use the predefined circuits in `circuits`.
 However, if you would like to generate your own circuits, use `circuit.py`:
 
 ```
-python3 circuit.py [-w=width] [spec_file] [experiment_type]"
+python3 circuit.py [-w=width] [-g=max_gates] [spec_file] [experiment_type]"
 ```
 
 [TODO] Add argparse to circuit.py
 
 Experiment type can be either `pbd` or `ccd`.
 
-For CCD, if width is not a feature that was deemed significant from the PBD
+For CCD, if width (circuit depth) is not a feature that was deemed significant from the PBD
 experiment, fix call `circuit.py` with `w=0`.
 
 To exclude features from the CCD experiment, delete the relevant gates in the
