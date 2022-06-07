@@ -12,6 +12,8 @@ in `requirements.txt`.
 
 ### Getting the Cost Model
 
+TL;DR: run appropriate circuit in circuits file; and feed the results to
+cost_modeler.py.
 
 ### Specific Example (ABY)
 Cherry-pick [this
@@ -19,9 +21,6 @@ commit](https://github.com/vivi/ABY/commit/ec4447b5027b5fa30738365d1acc860c5455e
 rebuild ABY.
 
 [TODO] Fix cost_modeler.py to differentiate between ABY/AgMPC
-
-TL;DR: run appropriate circuit in circuits file; and feed the results to
-cost_modeler.py.
 
 ## Generating Circuits
 For convenience, you can use the predefined circuits in `circuits`.
