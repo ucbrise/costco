@@ -1,19 +1,27 @@
-[TODO] License blurb
+# CostCO
+WARNING: This is an academic proof-of-concept prototype and has not received
+careful code review. This implementation is NOT ready for production use.
 
 ## Setup
 Set up a python virtual environment (recommended) and install the dependencies
 in `requirements.txt`.
 
 ## Cost Modeling a Protocol
-(under construction)
+### Screening Step
+[TODO] pbd.py
 
-### ABY
-Cherry-pick this commit [TODO: link to patch] into your ABY directory and
+### Getting the Cost Model
+
+
+### Specific Example (ABY)
+Cherry-pick [this
+commit](https://github.com/vivi/ABY/commit/ec4447b5027b5fa30738365d1acc860c5455e5d8) into your ABY directory and
 rebuild ABY.
 
 [TODO] Fix cost_modeler.py to differentiate between ABY/AgMPC
 
-TL;DR: run appropriate circuit in circuits file; and feed the results to foba.
+TL;DR: run appropriate circuit in circuits file; and feed the results to
+cost_modeler.py.
 
 ## Generating Circuits
 For convenience, you can use the predefined circuits in `circuits`.
@@ -23,8 +31,6 @@ However, if you would like to generate your own circuits, use `circuit.py`:
 ```
 python3 circuit.py [-w=width] [-g=max_gates] [spec_file] [experiment_type]"
 ```
-
-[TODO] Add argparse to circuit.py
 
 Experiment type can be either `pbd` or `ccd`.
 
