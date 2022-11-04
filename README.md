@@ -17,7 +17,7 @@ cost_modeler.py.
 
 ### Specific Example (ABY)
 Cherry-pick [this
-commit](https://github.com/vivi/ABY/commit/ec4447b5027b5fa30738365d1acc860c5455e5d8) into your ABY directory and
+commit](https://github.com/vivi/ABY/commit/659fb849aff4f72edb84b59caa7d91b7cab979ec) into your ABY directory and
 rebuild ABY.
 
 [TODO] Fix cost_modeler.py to differentiate between ABY/AgMPC
